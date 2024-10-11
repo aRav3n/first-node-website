@@ -23,7 +23,7 @@ app.get("/contact.html", function (req, res) {
 });
 
 app.get("*", function (req, res) {
-  res.sendFile(filenameWithPath("404"));
+  res.status(404).sendFile(filenameWithPath("404"));
 });
 
 const PORT = process.env.PORT || 8080;
